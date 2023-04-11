@@ -115,6 +115,10 @@ const createHtml = (athlete) => {
   fragment.appendChild(title);
   const date = new Date(latestRace.date);
 
+  /**
+   * Array that contains the times for the athletes laps
+   */
+  const timeAsArray = latestRace.time;
 
   /**
    * The day of the last race
