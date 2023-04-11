@@ -89,16 +89,16 @@ const MONTHS = [
   
     list.innerHTML = /* html */ `
       <dt>Athlete</dt>
-      <dd>${firstName surname}</dd>
+      <dd>${firstName}  ${surname}</dd>
   
       <dt>Total Races</dt>
       <dd>${races}</dd>
   
       <dt>Event Date (Latest)</dt>
-      <dd>${day month year}</dd>
+      <dd>${day} ${month} ${year}</dd>
   
       <dt>Total Time (Latest)</dt>
-      <dd>${hours.padStart(2, 0) minutes}</dd>
+      <dd>${hours.padStart(2, 0)} ${minutes}</dd>
     `;
   
     fragment.appendChild(list);
