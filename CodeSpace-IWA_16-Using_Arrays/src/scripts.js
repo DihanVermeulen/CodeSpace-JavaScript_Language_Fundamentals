@@ -116,8 +116,17 @@ const createHtml = (athlete) => {
   const date = new Date(latestRace.date);
 
 
+  /**
+   * The day of the last race
+   */
   const day = date.getDate() - 1;
+  /**
+   * The month of the last race
+   */
   const month = MONTHS[date.getMonth()];
+  /**
+   * The year of the last race
+   */
   const year = date.getFullYear();
 
 
