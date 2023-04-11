@@ -117,6 +117,7 @@ const createHtml = (athlete) => {
 
 
   const day = date.getDate() - 1;
+  const month = MONTHS[date.getMonth()];
 
   const list = document.createElement(dl);
 
