@@ -69,6 +69,7 @@ const data = {
  * Created html for each individual athlete to be displayed
  * in the sections provided in the html
  * @param {Object} athlete Athlete object that is taken in
+ * @returns {string} html that will be rendered inside of dedicated sections
  */
 const createHtml = (athlete) => {
   firstName, surname, id, (races = athlete[date]), ([time] = races.reverse());
