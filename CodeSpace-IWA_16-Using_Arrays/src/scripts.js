@@ -103,9 +103,6 @@ const createHtml = (athlete) => {
     latestRace = races[races.length - 1],
   } = athlete;
 
-  console.log("Athlete: ", firstName, surname);
-  console.log("Total races: ", totalRaces);
-
   const fragment = document.createDocumentFragment();
 
   /**
@@ -146,8 +143,6 @@ const createHtml = (athlete) => {
   const hours = Math.floor(total / 60);
   const minutes = total % 60;
 
-  console.log("Time: ", `${hours}:${minutes}`);
-
   const list = document.createElement("dl");
 
   list.innerHTML = /* html */ `
@@ -174,9 +169,6 @@ const {
     data: { NM372, SV782 },
   },
 } = data;
-
-createHtml(NM372);
-createHtml(SV782);
 
 document.querySelector("[data-athlete='NM372']").appendChild(createHtml(NM372));
 document.querySelector("[data-athlete='SV782']").appendChild(createHtml(SV782));
