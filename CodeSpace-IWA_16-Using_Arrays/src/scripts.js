@@ -94,7 +94,14 @@ const data = {
  * @returns {string} html that will be rendered inside of dedicated sections
  */
 const createHtml = (athlete) => {
-  firstName, surname, id, (races = athlete[date]), ([time] = races.reverse());
+  const {
+    races,
+    firstName,
+    surname,
+    id,
+    totalRaces = races.length,
+    latestRace = races[races.length - 1],
+  } = athlete;
 
   const fragment = document.createDocumentFragment();
 
