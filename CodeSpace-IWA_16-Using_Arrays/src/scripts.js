@@ -107,6 +107,11 @@ const createHtml = (athlete) => {
 
   title = document.createElement(h2);
   title = id;
+  /*
+   * Creates an h2 element and changes its text content to the id variable
+   */
+  const title = document.createElement("h2");
+  title.textContent = id;
   fragment.appendChild(title);
 
   const list = document.createElement(dl);
