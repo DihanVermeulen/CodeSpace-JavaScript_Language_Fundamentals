@@ -113,6 +113,10 @@ const createHtml = (athlete) => {
   const title = document.createElement("h2");
   title.textContent = id;
   fragment.appendChild(title);
+  const date = new Date(latestRace.date);
+
+
+  const day = date.getDate() - 1;
 
   const list = document.createElement(dl);
 
