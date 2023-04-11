@@ -103,16 +103,21 @@ const createHtml = (athlete) => {
     latestRace = races[races.length - 1],
   } = athlete;
 
+  console.log("Athlete: ", firstName, surname);
+  console.log("Total races: ", totalRaces);
+
   const fragment = document.createDocumentFragment();
 
-  title = document.createElement(h2);
-  title = id;
-  /*
-   * Creates an h2 element and changes its text content to the id variable
+  /**
+   * h2 element for the title
    */
   const title = document.createElement("h2");
   title.textContent = id;
   fragment.appendChild(title);
+
+  /**
+   * The full date of the last race
+   */
   const date = new Date(latestRace.date);
 
   /**
@@ -133,39 +138,35 @@ const createHtml = (athlete) => {
    */
   const year = date.getFullYear();
 
+  console.log("Event date (latest): ", day, month, year);
 
-  const list = document.createElement(dl);
   const [first, second, third, fourth] = timeAsArray;
   const total = first + second + third + fourth;
 
   const hours = Math.floor(total / 60);
   const minutes = total % 60;
 
+  console.log("Time: ", `${hours}:${minutes}`);
 
-  const day = date.getDate();
-  const month = MONTHS[date.month];
-  const year = date.year;
-
-  total = first + second + third + fourth;
-
-  const hours = total / 60;
-  const minutes = total / hours / 60;
+  const list = document.createElement("dl");
 
   list.innerHTML = /* html */ `
-      <dt>Athlete</dt>
+      <dt>Athlete:</dt>
       <dd>${firstName}  ${surname}</dd>
-  
-      <dt>Total Races</dt>
-      <dd>${races}</dd>
-  
-      <dt>Event Date (Latest)</dt>
+
+      <dt>Total Races:</dt>
+      <dd>${totalRaces}</dd>
+
+      <dt>Event Date (Latest):</dt>
       <dd>${day} ${month} ${year}</dd>
-  
-      <dt>Total Time (Latest)</dt>
-      <dd>${hours.padStart(2, 0)} ${minutes}</dd>
+
+      <dt>Total Time (Latest):</dt>
+      <dd>${hours}:${minutes}</dd>
     `;
 
   fragment.appendChild(list);
+
+  return fragment;
 };
 
 const {
@@ -173,5 +174,9 @@ const {
     data: { NM372, SV782 },
   },
 } = data;
-document.querySelector(NM372).appendChild(createHtml(NM372));
-document.querySelector(SV782).appendChild(createHtml(SV782));
+
+createHtml(NM372);
+createHtml(SV782);
+
+document.querySelector("[data-athlete='NM372']").appendChild(createHtml(NM372));
+document.querySelector("[data-athlete='SV782']").appendChild(createHtml(SV782));
