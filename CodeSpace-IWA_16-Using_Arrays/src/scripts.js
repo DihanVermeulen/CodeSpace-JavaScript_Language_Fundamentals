@@ -135,12 +135,12 @@ const createHtml = (athlete) => {
 
 
   const list = document.createElement(dl);
+  const [first, second, third, fourth] = timeAsArray;
 
   const day = date.getDate();
   const month = MONTHS[date.month];
   const year = date.year;
 
-  first, second, third, (fourth = timeAsArray);
   total = first + second + third + fourth;
 
   const hours = total / 60;
