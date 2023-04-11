@@ -108,6 +108,10 @@ const createHtml = (athlete) => {
   fragment.appendChild(list);
 };
 
-[NM372], ([SV782] = data);
+const {
+  response: {
+    data: { NM372, SV782 },
+  },
+} = data;
 document.querySelector(NM372).appendChild(createHtml(NM372));
 document.querySelector(SV782).appendChild(createHtml(SV782));
