@@ -1,3 +1,22 @@
+/**
+ * @typedef {Object} AthleteData
+ * @property {string} firstName
+ * @property {string} surname
+ * @property {string} id
+ * @property {Object[]} races
+ * @property {string} races.date
+ * @property {number[]} races.time
+ *
+ * @typedef {Object} ResponseData
+ * @property {string} requestType
+ * @property {string} requestBy
+ * @property {string} forDisplay
+ * @property {Object.<string, AthleteData>} data
+ *
+ * @typedef {Object} DataObject
+ * @property {ResponseData} response
+ */
+
 const MONTHS = [
   "Jan",
   "Feb",
@@ -13,6 +32,9 @@ const MONTHS = [
   "Dec",
 ];
 
+/**
+ * @type {DataObject}
+ */
 const data = {
   response: {
     requestType: "FETCH_ATHLETE_DATA",
