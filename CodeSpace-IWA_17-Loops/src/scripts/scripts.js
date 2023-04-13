@@ -19,7 +19,7 @@ const getDaysInMonth = (date) =>
 // Only edit below
 
 /** Creates array out of the length that is provided
- * @param length Length of array
+ * @param {number} length Length of array
  * @returns An array with the same length provided
  */
 const createArray = (length) => {
@@ -111,7 +111,7 @@ const addCell = (existing, classString, value) => {
 
 /**
  *
- * @param {*} data The data {@link createData} required to create HTML
+ * @param {Array} data The data {@link createData} required to create HTML
  * @returns HTML to the body of the table
  */
 const createHtml = (data) => {
