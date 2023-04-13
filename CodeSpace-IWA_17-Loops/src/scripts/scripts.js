@@ -149,6 +149,9 @@ const createHtml = (data) => {
        */
       let classString = "table__cell";
 
+      /* Changes the class string according to if the day is the current day
+       * or if it is a weekend day or if it is an alternate week
+       */
       if (isToday) {
         classString += " table__cell_today";
       } else if (isWeekend && isAlternate) {
