@@ -163,7 +163,9 @@ const createHtml = (data) => {
       }
       inner = addCell(inner, classString, value);
     }
-
+    /* Adds the created HTML from the loop to the result array
+    * as a row
+    */
     result += `<tr>${inner}</tr>`;
   }
   return result;
