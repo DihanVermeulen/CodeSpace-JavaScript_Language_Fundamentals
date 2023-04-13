@@ -111,7 +111,7 @@ const addCell = (existing, classString, value) => {
 
 /**
  *
- * @param {Array} data The data {@link createData} required to create HTML
+ * @param {Array} data The data received from {@link createData} required to create HTML
  * @returns HTML to the body of the table
  */
 const createHtml = (data) => {
