@@ -126,6 +126,7 @@ const createHtml = (data) => {
        * The date that the loop reads
        */
       const value = data[days].days[dayOfWeek].value;
+      console.trace(data[days].days[dayOfWeek].dayOfWeek);
 
       /**
        * Checks if the date in the loop is equal to the current
@@ -136,7 +137,10 @@ const createHtml = (data) => {
       /**
        * Checks if a day is in the weekend
        */
-      const isWeekend = dayOfWeek == 1 && dayOfWeek == 7;
+      const isWeekend =
+        data[days].days[dayOfWeek].dayOfWeek == 1 ||
+        data[days].days[dayOfWeek].dayOfWeek == 7;
+      console.log(isWeekend);
       /** Checks every second row */
       const isAlternate = week % 2 == 0 ? true : false;
 
@@ -145,11 +149,15 @@ const createHtml = (data) => {
        */
       let classString = "table__cell";
 
-      if (isToday) classString = `${classString} table__cell_today`;
-      if (isToday && isAlternate)
-        classString = `${classString} table__cell_alternate table__cell_today `;
-      if (isWeekend) classString = `${classString} table__cell_weekend`;
-      if (isAlternate) classString = `${classString} table__cell_alternate`;
+      if (isToday) {
+        classString += " table__cell_today";
+      } else if (isWeekend && isAlternate) {
+        classString += " table__cell_weekend table__cell_alternate";
+      } else if (isWeekend) {
+        classString += " table__cell_weekend";
+      } else if (isAlternate) {
+        classString += " table__cell_alternate";
+      }
       inner = addCell(inner, classString, value);
     }
 
