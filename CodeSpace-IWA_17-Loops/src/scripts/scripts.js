@@ -126,7 +126,6 @@ const createHtml = (data) => {
        * The date that the loop reads
        */
       const value = data[days].days[dayOfWeek].value;
-      console.trace(data[days].days[dayOfWeek].dayOfWeek);
 
       /**
        * Checks if the date in the loop is equal to the current
@@ -140,7 +139,6 @@ const createHtml = (data) => {
       const isWeekend =
         data[days].days[dayOfWeek].dayOfWeek == 1 ||
         data[days].days[dayOfWeek].dayOfWeek == 7;
-      console.log(isWeekend);
       /** Checks every second row */
       const isAlternate = week % 2 == 0 ? true : false;
 
@@ -164,8 +162,8 @@ const createHtml = (data) => {
       inner = addCell(inner, classString, value);
     }
     /* Adds the created HTML from the loop to the result array
-    * as a row
-    */
+     * as a row
+     */
     result += `<tr>${inner}</tr>`;
   }
   return result;
