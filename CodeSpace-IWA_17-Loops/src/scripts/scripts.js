@@ -108,6 +108,7 @@ const addCell = (existing, classString, value) => {
 
   return result;
 };
+
 /**
  *
  * @param {*} data The data {@link createData} required to create HTML
@@ -139,6 +140,7 @@ const createHtml = (data) => {
       const isWeekend =
         data[days].days[dayOfWeek].dayOfWeek == 1 ||
         data[days].days[dayOfWeek].dayOfWeek == 7;
+
       /** Checks every second row */
       const isAlternate = week % 2 == 0 ? true : false;
 
