@@ -61,6 +61,10 @@ const createData = () => {
   let dayCount = 1;
   // Loops for the amount of weeks there are
   for (const weekIndex in weeks) {
+    /**
+     * Values object which is used to create each row
+     * @type {Object} 
+     */
     const value = {
       week: parseInt(weekIndex) + 1,
       days: [],
