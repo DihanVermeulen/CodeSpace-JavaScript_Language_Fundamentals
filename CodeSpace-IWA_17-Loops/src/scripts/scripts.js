@@ -97,10 +97,10 @@ const createData = () => {
 
 /**
  * Creates a cell for a table
- * @param {*} existing Existing cells in the table row
- * @param {*} classString Class that the cell will inherit
- * @param {*} value Value inside of cell i.e. the date
- * @returns HTML to a table cell
+ * @param {string} existing Existing cells in the table row
+ * @param {string} classString Class that the cell will inherit
+ * @param {number} value Value inside of cell i.e. the date
+ * @returns {string} HTML to a table cell
  */
 const addCell = (existing, classString, value) => {
   /** Result that is returned */
