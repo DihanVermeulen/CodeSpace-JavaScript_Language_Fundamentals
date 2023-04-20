@@ -132,8 +132,7 @@ const createHtml = (data) => {
        * Checks if the date in the loop is equal to the current
        * date
        */
-      // const isToday = new Date().getDate() === value;
-      const isToday = 16 === value;
+      const isToday = new Date().getDate() === value;
       /**
        * Checks if a day is in the weekend
        */
