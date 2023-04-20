@@ -20,7 +20,7 @@ const getDaysInMonth = (date) =>
 
 /** Creates array out of the length that is provided
  * @param {number} length Length of array
- * @returns An array with the same length provided
+ * @returns {Array<number>} An array with the same length provided
  */
 const createArray = (length) => {
   const result = [];
