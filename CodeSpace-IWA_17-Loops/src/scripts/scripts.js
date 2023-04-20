@@ -18,7 +18,8 @@ const getDaysInMonth = (date) =>
 
 // Only edit below
 
-/** Creates array out of the length that is provided
+/**
+ * Creates array out of the length that is provided
  * @param {number} length Length of array
  * @returns {Array<number>} An array with the same length provided
  */
@@ -63,7 +64,7 @@ const createData = () => {
   for (const weekIndex in weeks) {
     /**
      * Values object which is used to create each row
-     * @type {Object} 
+     * @type {Object}
      */
     const value = {
       week: parseInt(weekIndex) + 1,
